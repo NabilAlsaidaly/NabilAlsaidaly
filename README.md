@@ -34,14 +34,6 @@ Scalable movie streaming platform with admin panel and secure authentication.
 
 ---
 
-## GitHub Stats
-
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=NabilAlsaidaly&show_icons=true&theme=tokyonight)
-
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=NabilAlsaidaly&layout=compact&theme=tokyonight)
-
----
-
 ## Connect
 - **LinkedIn:** https://www.linkedin.com/in/nabil-alsaidali-b03291246  
 - **Portfolio:** *coming soon*  
