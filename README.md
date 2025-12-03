@@ -1,11 +1,11 @@
-# Hi, I'm Nabil Al Saidali 👋  
+# Hi, I'm Nabil Al Saidali 
 ### AI/ML Developer & Full-Stack Engineer
 
 I build scalable AI systems and full-stack applications with clean backend architecture, applied machine learning, and modern development workflows. I enjoy transforming data into intelligent solutions and designing frameworks that are modular, maintainable, and production-ready.
 
 ---
 
-## 🔥 Technical Focus
+## Technical Focus
 - **AI/ML Engineering:** XGBoost, LSTM, SVM, Random Forest, KNN, Decision Trees  
 - **Python Ecosystem:** TensorFlow, Scikit-learn, Pandas, NumPy, Matplotlib  
 - **Backend Engineering:** Laravel 12, REST APIs, Docker, Job Queues  
@@ -15,7 +15,7 @@ I build scalable AI systems and full-stack applications with clean backend archi
 
 ---
 
-## 🚀 Featured Projects
+## Featured Projects
 
 ### 🔹 Job Platform Ecosystem  
 Multi-application Laravel ecosystem built with a shared model package and separate dashboards:  
@@ -34,7 +34,7 @@ Scalable movie streaming platform with admin panel and secure authentication.
 
 ---
 
-## 📈 GitHub Stats
+## GitHub Stats
 
 ![GitHub Stats](https://github-readme-stats.vercel.app/api?username=NabilAlsaidaly&show_icons=true&theme=tokyonight)
 
@@ -42,13 +42,13 @@ Scalable movie streaming platform with admin panel and secure authentication.
 
 ---
 
-## 🌐 Connect
+## Connect
 - **LinkedIn:** https://www.linkedin.com/in/nabil-alsaidali-b03291246  
 - **Portfolio:** *coming soon*  
 
 ---
 
-## ⚡ Current Goals
+## Current Goals
 - Advance in applied AI engineering  
 - Develop more production-ready ML pipelines  
 - Improve microservices & DevOps skills  
