@@ -36,7 +36,7 @@ Scalable movie streaming platform with admin panel and secure authentication.
 
 ## Connect
 - **LinkedIn:** https://www.linkedin.com/in/nabil-alsaidali-b03291246  
-- **Portfolio:** *coming soon*  
+- **Portfolio:** https://nabilalsaidali.com  
 
 ---
 
