@@ -1,0 +1,46 @@
+name: Update Profile Images (Stats & Trophies)
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 3 * * *" # daily at 03:00 UTC
+
+permissions:
+  contents: write
+
+jobs:
+  update-images:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Create assets directory
+        run: mkdir -p assets
+
+      - name: Download GitHub Stats SVG
+        run: |
+          curl -L --fail \
+            "https://github-readme-stats.vercel.app/api?username=NabilAlsaidaly&show_icons=true&theme=dark" \
+            -o assets/github-stats.svg
+
+      - name: Download GitHub Trophies SVG
+        run: |
+          curl -L --fail \
+            "https://github-profile-trophy.vercel.app/?username=NabilAlsaidaly&theme=darkhub&margin-w=15" \
+            -o assets/github-trophies.svg
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          git add assets/github-stats.svg assets/github-trophies.svg
+
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+            exit 0
+          fi
+
+          git commit -m "chore: update profile images"
+          git push
