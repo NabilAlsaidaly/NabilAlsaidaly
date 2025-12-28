@@ -18,27 +18,48 @@ jobs:
       - name: Create assets directory
         run: mkdir -p assets
 
-      - name: Download GitHub Stats SVG
+      - name: Download GitHub Stats SVG (validated)
         run: |
           curl -L --retry 5 --retry-delay 5 \
-            "https://github-readme-stats.vercel.app/api?username=NabilAlsaidaly&show_icons=true&theme=dark" \
-            -o assets/github-stats.svg || echo "Stats download failed (possibly rate-limited). Will retry next run."
+            -H "Accept: image/svg+xml" \
+            "https://github-readme-stats.vercel.app/api?username=NabilAlsaidaly&show_icons=true&theme=dark&format=svg" \
+            -o assets/github-stats.svg
 
-      - name: Download GitHub Trophies SVG
+          # Validate it's actually an SVG (not HTML / error text)
+          if ! grep -q "<svg" assets/github-stats.svg; then
+            echo "Invalid SVG content received for stats. Removing file."
+            rm -f assets/github-stats.svg
+          fi
+
+      - name: Download GitHub Trophies SVG (validated)
         run: |
           curl -L --retry 5 --retry-delay 5 \
+            -H "Accept: image/svg+xml" \
             "https://github-profile-trophy.vercel.app/?username=NabilAlsaidaly&theme=darkhub&margin-w=15" \
-            -o assets/github-trophies.svg || echo "Trophies download failed (possibly rate-limited). Will retry next run."
+            -o assets/github-trophies.svg
+
+          # Validate it's actually an SVG (not HTML / error text)
+          if ! grep -q "<svg" assets/github-trophies.svg; then
+            echo "Invalid SVG content received for trophies. Removing file."
+            rm -f assets/github-trophies.svg
+          fi
 
       - name: Commit and push if changed
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
-          git add assets/github-stats.svg assets/github-trophies.svg
+          # Add only existing valid files
+          if [ -f assets/github-stats.svg ]; then
+            git add assets/github-stats.svg
+          fi
+          if [ -f assets/github-trophies.svg ]; then
+            git add assets/github-trophies.svg
+          fi
 
+          # If nothing was added/changed, exit cleanly
           if git diff --cached --quiet; then
-            echo "No changes to commit."
+            echo "No valid image updates to commit."
             exit 0
           fi
 
