@@ -57,12 +57,15 @@ I enjoy transforming data into intelligent solutions and designing modular, main
 ---
 
 ## 📊 GitHub Stats
+
 ![GitHub Stats](https://github-readme-stats.vercel.app/api?username=NabilAlsaidaly&show_icons=true&theme=dark)
 
 ---
 
 ## 🏆 GitHub Trophies
+
 ![GitHub Trophies](https://github-profile-trophy.vercel.app/?username=NabilAlsaidaly&theme=darkhub)
+
 
 ---
 
