@@ -56,12 +56,6 @@ I enjoy transforming data into intelligent solutions and designing modular, main
 
 ---
 
-## 📊 GitHub Stats
-
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=NabilAlsaidaly&show_icons=true&theme=dark&cache_seconds=86400)
-
-
----
 
 ## 🎯 Current Goals
 - Advance in applied AI engineering  
