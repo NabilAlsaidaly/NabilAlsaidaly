@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./assets/logo.png" width="140" alt="Nabil Alsaidali Logo" />
+  <img src="./assets/logo-v2.png" width="140" alt="Nabil Alsaidali Logo" />
 </p>
 
 <h1 align="center">Hi, I'm Nabil Al Saidali</h1>
